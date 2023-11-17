@@ -46,7 +46,7 @@
             </div>
             <div class="col-7">
                 <div class="forgot-password">
-                    <a href="forgot-password.html">Recuperar Contraseña</a>
+                    <a href="{{route('auth.forgot-password')}}">Recuperar Contraseña</a>
                 </div>
             </div>
         </div>

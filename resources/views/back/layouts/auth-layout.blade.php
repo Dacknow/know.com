@@ -42,7 +42,7 @@
 			type="text/css"
 			href="/back/vendors/styles/icon-font.min.css"
 		/>
-		<link rel="stylesheet" type="text/css" href="/back/vendors/styles/stylev.css" />
+		<link rel="stylesheet" type="text/css" href="/back/vendors/styles/style.css" />
         
 		<!-- Google Tag Manager -->
 		<script>

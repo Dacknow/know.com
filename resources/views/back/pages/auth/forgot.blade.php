@@ -29,7 +29,7 @@
             
             <div class="col-6">
                 <div class="input-group mb-0">
-                    <a class="btn btn-outline-primary btn-lg btn-block" href="login.html">Iniciar Sesión</a>
+                    <a class="btn btn-outline-primary btn-lg btn-block" href="{{route('auth.login')}}">Iniciar Sesión</a>
                 </div>
             </div>
         </div>
