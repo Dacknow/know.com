@@ -59,6 +59,7 @@
 		</script>
 		<!-- End Google Tag Manager -->
         @stack('stylesheet')
+		@livewireStyles
 	</head>
 	<body class="login-page">
 		<div class="container-fluid d-flex justify-content-between align-items-center">
@@ -85,5 +86,6 @@
 		<script src="/back/vendors/scripts/layout-settings.js"></script>
 
         @stack('scripts')
+		@livewireScripts
 	</body>
 </html>

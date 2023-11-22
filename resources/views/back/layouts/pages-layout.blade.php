@@ -59,6 +59,7 @@
 		</script>
 		<!-- End Google Tag Manager -->
         @stack('stylesheet')
+        @livewireStyles
     </head>
     <body>
 
@@ -238,7 +239,7 @@
 
         <div class="left-side-bar">
             <div class="brand-logo">
-                <a href="{{route('auth.home')}}">
+                <a href="{{route('author.home')}}">
                     <img src="/back/vendors/images/logo-dark.png" alt="" class="dark-logo" />
                     <img src="/back/vendors/images/logo.png" alt="" class="light-logo"/>
                 </a>
@@ -251,19 +252,19 @@
                     <ul id="accordion-menu">
                         <li>
                             <a href="calendar.html" class="dropdown-toggle no-arrow">
-                                <span class="micon bi bi-calendar4-week"></span
+                                <span class="micon bi bi-house"></span
                                 ><span class="mtext">Inicio</span>
                             </a>
                         </li>
                         <li>
                             <a href="sitemap.html" class="dropdown-toggle no-arrow">
-                                <span class="micon bi bi-diagram-3"></span
+                                <span class="micon bi bi-boxes"></span
                                 ><span class="mtext">Categorías</span>
                             </a>
                         </li>
                         <li class="dropdown">
 							<a href="javascript:;" class="dropdown-toggle" data-option="off">
-								<span class="micon bi bi-house"></span><span class="mtext">Publicaciones</span>
+								<span class="micon bi bi-collection-fill"></span><span class="mtext">Publicaciones</span>
 							</a>
 							<ul class="submenu">
 								<li><a href="">Nueva Publicación</a></li>
@@ -275,7 +276,7 @@
                         </li>
                         <li class="dropdown">
 							<a href="javascript:;" class="dropdown-toggle" data-option="off">
-								<span class="micon bi bi-house"></span><span class="mtext">configuraciones</span>
+								<span class="micon dw dw-settings2"></span><span class="mtext">configuraciones</span>
 							</a>
 							<ul class="submenu">
 								<li><a href="">Generales</a></li>
@@ -342,5 +343,6 @@
         <script src="/back/vendors/scripts/layout-settings.js"></script>
 
         @stack('scripts')
+        @livewireScripts
     </body>
 </html>
