@@ -1,5 +1,5 @@
 <div>
-    <form wire:submit.prevent="loginHandler()" method="POST">
+    <form wire:submit.prevent="loginHandler()" method="POST">        
         @if (Session::get('fail'))
             <div class="alert alert-danger">
                 {{ Session::get('fail')}} 
@@ -22,8 +22,8 @@
             <input
                 type="text"
                 class="form-control form-control-lg"
-                placeholder="Correo"
-                wire:model="email"
+                placeholder="Correo o Usuario"
+                wire:model="login_id"
             />
             <div class="input-group-append custom">
                 <span class="input-group-text"
@@ -31,7 +31,7 @@
                 ></span>
             </div>
         </div>        
-            @error('email')
+            @error('login_id')
                 <span class="text-danger">{{$message}}</span>
             @enderror
         <div class="input-group custom">
