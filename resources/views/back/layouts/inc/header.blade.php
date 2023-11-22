@@ -181,9 +181,10 @@
                     <a class="dropdown-item" href="faq.html"
                         ><i class="dw dw-help"></i> Help</a
                     >
-                    <a class="dropdown-item" href="login.html"
-                        ><i class="dw dw-logout"></i> Log Out</a
+                    <a href="{{ route('author.logout_handler') }}" class="dropdown-item" onclick="event.preventDefault();document.getElementById('logout-form').submit();"
+                        ><i class="dw dw-logout"></i> Cerrar Sesión</a
                     >
+                    <form action="{{ route('author.logout_handler') }}" method="POST" id="logout-form">@csrf</form>
                 </div>
             </div>
         </div>

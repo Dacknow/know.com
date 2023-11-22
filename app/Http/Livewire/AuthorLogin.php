@@ -9,7 +9,7 @@ use App\Models\User;
 class AuthorLogin extends Component
 {
     public $email, $password;
-    public function loginHundler(){
+    public function loginHandler(){
         $this->validate([
             'email'=>'required|email|exists:users,email',
             'password'=> 'required|min:5'

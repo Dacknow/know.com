@@ -1,5 +1,5 @@
 <div>
-    <form wire:submit.prevent="loginHundler()" method="POST">
+    <form wire:submit.prevent="loginHandler()" method="POST">
         @if (Session::get('fail'))
             <div class="alert alert-danger">
                 {{ Session::get('fail')}} 
@@ -30,12 +30,10 @@
                     ><i class="icon-copy dw dw-user1"></i
                 ></span>
             </div>
-        </div>
-        
+        </div>        
             @error('email')
                 <span class="text-danger">{{$message}}</span>
             @enderror
-            
         <div class="input-group custom">
             <input
                 type="password"
@@ -49,11 +47,9 @@
                 ></span>
             </div>
         </div>
-
         @error('password')
             <span class="text-danger">{{$message}}</span>
         @enderror
-
         <div class="row pb-30">
             <div class="col-5">
                 <div class="custom-control custom-checkbox">
