@@ -13,7 +13,7 @@
                     <input
                         type="text"
                         class="form-control search-input"
-                        placeholder="Search Here"
+                        placeholder="Buscar"
                     />
                     <div class="dropdown">
                         <a
@@ -57,7 +57,7 @@
                                 </div>
                             </div>
                             <div class="text-right">
-                                <button class="btn btn-primary">Search</button>
+                                <button class="btn btn-primary">Buscar</button>
                             </div>
                         </div>
                     </div>
@@ -173,13 +173,13 @@
                     class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
                 >
                     <a class="dropdown-item" href="profile.html"
-                        ><i class="dw dw-user1"></i> Profile</a
+                        ><i class="dw dw-user1"></i> Perfil</a
                     >
                     <a class="dropdown-item" href="profile.html"
-                        ><i class="dw dw-settings2"></i> Setting</a
+                        ><i class="dw dw-settings2"></i> Ajustes</a
                     >
                     <a class="dropdown-item" href="faq.html"
-                        ><i class="dw dw-help"></i> Help</a
+                        ><i class="dw dw-help"></i> Ayuda</a
                     >
                     <a href="{{ route('author.logout_handler') }}" class="dropdown-item" onclick="event.preventDefault();document.getElementById('logout-form').submit();"
                         ><i class="dw dw-logout"></i> Cerrar Sesión</a
