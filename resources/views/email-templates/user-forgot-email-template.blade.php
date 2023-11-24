@@ -16,7 +16,7 @@
     <br>
     <b>NB:</b> Este link estara valido por 15 minutos
     <br>
-    Si no solicitaste recuperar tu contraseniaa, por favor ignora este mensaje.
+    Si no solicitaste recuperar tu contrasenia, por favor ignora este mensaje.
 </p>
 </body>
 </html>

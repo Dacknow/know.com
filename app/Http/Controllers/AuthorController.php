@@ -9,6 +9,8 @@ use Illuminate\Support\Carbon;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use PHPMailer\PHPMailer\PHPMailer;
+use Illuminate\Support\Facades\File;
+
 
 class AuthorController extends Controller
 {
@@ -118,6 +120,38 @@ class AuthorController extends Controller
         $mail->Body = $mailConfig['mail_body'];
         $mail->send();         
         return redirect()->route('author.login')->with('success','Listo!, Tu contraseña ha sido reestablecida');
+    }
+
+    public function profileView(Request $request){
+        $user = null;
+        if(Auth::guard('web')->check()){
+            $user = User::findOrFail(auth()->id());    
+        }
+        return view('back.pages.profile', compact('user'));
+    }
+
+    public function changeProfilePicture(Request $request){
+        $user = User::findOrFail(auth('author')->id());
+        $path = '/images/users/admins/';
+        $file = $request->file('userProfilePictureFile');
+        $old_picture = $user->getAttributes()['picture'];
+        $file_path = $path.$old_picture;
+        $filename = 'USER_IMG_'.rand(2,1000).$user->id.time().uniqid().'.jpg';
+
+        $upload = $file->move(public_path($path), $filename);
+        
+        if($upload){
+            if($old_picture != null && File::exists(public_path($path.$old_picture))){
+                File::delete(public_path($path.$old_picture));
+            }
+            $user->update(['picture'=>$filename]);
+            return response()->json(['status'=>1, 'msg'=>'Su foto fué cambiada con exito!.']);
+        }else{
+            
+            return response()->json(['status'=>0,'msg'=>'Algo salió mal!.']);             
+                
+        }
+        
     }
 
 }
